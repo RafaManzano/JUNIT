@@ -25,6 +25,9 @@ class JunitQuiniela {
 		numero = quiniela.comprobar1x2(a1, a2);
 		
 		assertTrue(numero == -1);
+		
+		
+		
 	}
 	
 	@Test
