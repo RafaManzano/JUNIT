@@ -5,32 +5,35 @@ import org.junit.jupiter.api.Test;
 class numerosJunit {
 
 	@Test
-	void arrayCorrecto() {
-		int[] array = {1, 6, 9, -2, 9, 1};
+	void numerosSumados() {
 		int[] res = null;
+		
+		int[] a1 = {1, 6, 9, -2, 9, 1};
 		int numero = 2;
 		
-		//System.out.println(array[0]);
-		res = Numeros.numerosSumados(array, numero);
+		res = Numeros.numerosSumados(a1, numero);
 		
-		assertTrue(array.length == res.length);
-		//System.out.println(array[0]);
-		//System.out.println(res[0]);
-		assertTrue((res[0] - array[0]) == numero);
-	}
-	
-	@Test
-	void ventajaIncorrecta() {
-		int[] array = {1, 6, 9, -2, 9, 1};
-		int[] res = null;
-		int numero = 2;
+		for(int i = 0; i < res.length; i++) {
+			assertTrue((res[i] - a1[i]) == numero);
+		}
 		
-		//System.out.println(array[0]);
-		res = Numeros.numerosSumados(array, numero);
+		int[] a2 = {7, 12, -9, -2, 0, 25};
+		numero = 5;
 		
-		//System.out.println(array[0]);
-		//System.out.println(res[0]);
-		assertFalse((res[0] - array[0]) != numero);
+		res = Numeros.numerosSumados(a2, numero);
+		
+		for(int i = 0; i < res.length; i++) {
+			assertTrue((res[i] - a2[i]) == numero);
+		}
+		
+		int[] a3 = {0, 1, 10, 5, -90, 20};
+		numero = 3;
+		
+		res = Numeros.numerosSumados(a3, numero);
+		
+		for(int i = 0; i < res.length; i++) {
+			assertTrue((res[i] - a3[i]) == numero);
+		}
 	}
 
 }

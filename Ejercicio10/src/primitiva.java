@@ -27,11 +27,13 @@ public class primitiva {
 		}
 		
 		if(resultado == 0) {
-			for(int i = 0; i < c1.length; i++) {
-				if(c1[i] == c2[i]) {
-					resultado++;
-				}
-			}
+				for(int i = 0; i < c1.length; i++) {
+					for(int a = 0; a < c2.length; a++) {
+						if(c1[i] == c2[a]) {
+							resultado++;
+						}
+					}
+				}			
 		}
 		
 		return resultado;

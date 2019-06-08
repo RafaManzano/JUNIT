@@ -5,25 +5,16 @@ import org.junit.jupiter.api.Test;
 class apuestaJunit {
 
 	@Test
-	void ApuestaCorrecta() {
-		char[] array = apuesta.generarApuesta1X2();
-	
-		assertTrue(array.length == 14);
-		assertTrue(array[0] == '1' || array[0] == 'X' || array[0] == '2');
-	}
-	
-	@Test
-	void ApuestaDe15Numeros() {
-		char[] array = apuesta.generarApuesta1X2();
+	void generarApuesta1X2() {
+		char[] array;
 		
-		assertFalse(array.length == 15);
+		for(int i = 0; i < 1000; i++) {
+			array = apuesta.generarApuesta1X2();
+			
+			for(int aux = 0; aux < array.length; aux++) {
+				assertTrue(array.length == 14);
+				assertTrue(array[aux] == '1' || array[aux] == 'X' || array[aux] == '2');
+			}
+		}
 	}
-	
-	@Test
-	void ApuestaErronea() {
-		char[] array = apuesta.generarApuesta1X2();
-		
-		assertFalse(array[0] == 'A');
-	}
-
 }
