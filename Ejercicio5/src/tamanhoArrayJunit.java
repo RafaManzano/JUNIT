@@ -33,13 +33,14 @@ class tamanhoArrayJunit {
 		}
 		
 		//array tam = 15, min = 2, max = 60
-		//El mismo metodo probado con 15,5,70 algunas veces daba error
-		//Comentar com Miguel Angel
-		array = tamanhoArray.arrayAleatorio(15, 2, 60);
-		
-		assertTrue(array.length == 15);
-		for(int i = 0; i < array.length; i++) {
-			assertTrue(array[i] >= 2 && array[i] <= 60);
+		//Estaba un error en el metodo
+		for(int a = 0; a < 200000; a++) {
+			array = tamanhoArray.arrayAleatorio(15, 2, 60);
+			
+			assertTrue(array.length == 15);
+			for(int i = 0; i < array.length; i++) {
+				assertTrue(array[i] >= 2 && array[i] <= 60);
+			}
 		}
 	}
 	

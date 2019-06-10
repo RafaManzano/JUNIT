@@ -7,7 +7,7 @@ public class tamanhoArray {
 		Random random = new Random();
 		
 		for(int i = 0; i < array.length; i++) {
-			array[i] = random.nextInt(max)+min;
+			array[i] = random.nextInt(max - min) + min;
 		}
 		
 		return array;

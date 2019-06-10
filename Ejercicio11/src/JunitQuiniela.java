@@ -12,17 +12,13 @@ class JunitQuiniela {
 		char[] a2 = {'1','1','1','1','1','1','1','1','1','1','1','1','1','1'};
 		numero = quiniela.comprobar1x2(a1, a2);
 		
-		assertTrue(a1.length == 14);
-		assertTrue(a2.length == 14);
 		assertTrue(numero == 14);
 		
 		//3 Aciertos
-		char[] a3 = {'1','X','2','2','X','1','2','X','X','X','1','2','2','X'};
-		char[] a4 = {'1','1','1','1','1','1','1','1','1','1','1','1','1','1'};
+		char[] a3 = {'X','X','2','2','X','1','2','X','X','X','1','2','2','X'};
+		char[] a4 = {'X','2','X','1','1','2','1','2','X','1','X','1','X','X'};
 		numero = quiniela.comprobar1x2(a3, a4);
 		
-		assertTrue(a3.length == 14);
-		assertTrue(a4.length == 14);
 		assertTrue(numero == 3);
 		
 		//0 Aciertos
@@ -30,8 +26,6 @@ class JunitQuiniela {
 		char[] a6 = {'2','1','1','X','1','X','1','2','1','1','2','1','1','1'};
 		numero = quiniela.comprobar1x2(a5, a6);
 		
-		assertTrue(a5.length == 14);
-		assertTrue(a6.length == 14);
 		assertTrue(numero == 0);
 		
 		//Primer Array mas largo
@@ -41,23 +35,10 @@ class JunitQuiniela {
 		
 		assertTrue(numero == -1);
 		
-<<<<<<< HEAD
 		//En el primer array con un caracter invalido
 		char[] a9 = {'1','X','2','2','X','1','2','A','X','X','1','2','2','X'};
 		char[] a10 = {'2','1','1','X','1','X','1','2','1','1','2','1','1','1'};
 		numero = quiniela.comprobar1x2(a9, a10);
-=======
-		
-		
-	}
-	
-	@Test
-	public void QuinielaPrimerArrayErroneo() {
-		int numero = 0;
-		char[] a1 = {'1','1','1','1','1','1','1','1','1','1','1','1','1','P'};
-		char[] a2 = {'1','1','1','1','1','1','1','1','1','1','1','1','1','1'};
-		numero = quiniela.comprobar1x2(a1, a2);
->>>>>>> 59c012c08932ee449c34499fc1d8c2b1e27402d8
 		
 		assertTrue(numero == -1);
 		
@@ -75,5 +56,4 @@ class JunitQuiniela {
 		
 		assertTrue(numero == -2);
 	}
-
 }
